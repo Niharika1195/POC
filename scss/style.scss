@@ -1,0 +1,108 @@
+@import "color";
+@import "font";
+@import "mixins";
+.cont {
+    max-width: 1920px;
+    height: auto;
+    padding: 0;
+    .banner-container {
+        // max-width: 959px;
+    }
+    .bg-img {
+        background: linear-gradient(to bottom, rgba(251, 245, 252, 0.22), rgba(25, 117, 19, 0.38)), url(../assets/images/component.png) no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: auto;
+        .logo-position {
+            justify-content: center;
+            display: flex;
+            .logo {
+                background-color: $whitecolor;
+                width: 247px;
+                height: 104px;
+                box-shadow: 0px 3px 6px #00000042;
+                border-bottom-left-radius: 45px;
+                border-bottom-right-radius: 45px;
+                padding-top: 30px;
+                .logo-l {
+                    color: $ycolor;
+                    background-color: $pcolor;
+                    padding: 5px 11px;
+                    border-radius: 11px;
+                    letter-spacing: 0.25px;
+                    line-height: 25px;
+                    font: {
+                        size: 25px;
+                        family: "Montserrat-Bold", sans-serif;
+                    }
+                }
+                p {
+                    font-size: 13px;
+                    letter-spacing: 2.6px;
+                    color: $pcolor;
+                    margin-top: 10px;
+                    .logo-bold {
+                        font-family: "Montserrat-Bold", sans-serif;
+                    }
+                    .logo-text {
+                        font-family: "Montserrat-Light", sans-serif;
+                    }
+                }
+            }
+        }
+        .banner-text {
+            color: $whitecolor;
+            font: {
+                size: 40px;
+                family: "Montserrat-Bold", sans-serif;
+            }
+            line-height: 49px;
+        }
+        .banner-subtext {
+            color: $whitecolor;
+            font: {
+                size: 14px;
+                family: "Montserrat-Regular", sans-serif;
+            }
+            line-height: 18px;
+            margin-bottom: 93px;
+        }
+        // .fas {
+        //     color:$ycolor;
+        // }
+    }
+}
+
+.sub-container {
+    // display: flex;
+    // justify-content: center;
+    // max-width: 959px;
+    .checkartcle_heading {
+        color: $blackcolor;
+        margin-bottom: 18px;
+        line-height: 51px;
+        font: {
+            size: 40px;
+            family: "Montserrat-Bold", sans-serif;
+            weight: bold;
+        }
+    }
+    .checkartcle_subtext {
+        color: $primarycolor;
+        margin-bottom: 30px;
+        line-height: 22px;
+        font: {
+            size: 13px;
+            family: "Montserrat-Regular", sans-serif;
+        }
+    }
+    .small-card-type {
+        @include small-card;
+        .small-card-text {
+            @include small-card-text;
+        }
+        .small-card-subtext {
+            @include small-card-subtext;
+        }
+    }
+}

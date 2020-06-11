@@ -1,0 +1,29 @@
+@import "color";
+@import "font";
+@mixin small-card {
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+}
+
+@mixin small-card-text {
+    color: $blackcolor;
+    line-height: 11px;
+    letter-spacing: -0.09px;
+    margin-bottom: 7.95px;
+    font: {
+        size: 9px;
+        family: "Montserrat-Bold", sans-serif;
+        weight: 800;
+    }
+}
+
+@mixin small-card-subtext {
+    color: $primarycolor;
+    line-height: 8px;
+    font: {
+        size: 7px;
+        family: "GothamBook";
+    }
+}
+
+@mixin small-card-icon {}
