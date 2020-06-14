@@ -1,29 +1,152 @@
-@import "color";
-@import "font";
-@mixin small-card {
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 10px;
-}
-
-@mixin small-card-text {
-    color: $blackcolor;
-    line-height: 11px;
-    letter-spacing: -0.09px;
-    margin-bottom: 7.95px;
-    font: {
-        size: 9px;
-        family: "Montserrat-Bold", sans-serif;
-        weight: 800;
+    @import "color";
+    @import "font";
+    @mixin small-card {
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 10px;
     }
-}
-
-@mixin small-card-subtext {
-    color: $primarycolor;
-    line-height: 8px;
-    font: {
-        size: 7px;
-        family: "GothamBook";
+    
+    @mixin small-card-text {
+        color: $blackcolor;
+        line-height: 11px;
+        letter-spacing: -0.09px;
+        margin-bottom: 7.95px;
+        font: {
+            size: 9px;
+            family: "Montserrat-Bold", sans-serif;
+            weight: 800;
+        }
     }
-}
-
-@mixin small-card-icon {}
+    
+    @mixin small-card-subtext {
+        color: $primarycolor;
+        line-height: 8px;
+        font: {
+            size: 7px;
+            family: "GothamBook";
+        }
+    }
+    
+    @mixin small-card-icon {
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        padding: 2px 5px;
+        background-color: $lightgrey;
+        color: $blackcolor;
+        opacity: 0.58;
+        line-height: 15px;
+        font: {
+            size: 12px;
+            family: "Montserrat-Bold", sans-serif;
+        }
+    }
+    
+    @mixin card-banner-texts {
+        color: $secondarycolor;
+        line-height: 24px;
+    }
+    
+    @mixin add-to-playlist-button {
+        width: 120px;
+        height: 24px;
+        background: $whitecolor;
+        border: 1px solid $lightgrey;
+        border-radius: 4px;
+        line-height: 13px;
+        color: $darkgrey;
+        font: {
+            size: 10px;
+            family: "Montserrat-Regular", sans-serif;
+        }
+        .fas.fa-plus {
+            color: $darkblack;
+        }
+    }
+    
+    @mixin abtshow-heading {
+        line-height: 16px;
+        letter-spacing: -0.13px;
+        color: $blackcolor;
+        font: {
+            size: 13px;
+            family: "Montserrat-Bold", sans-serif;
+        }
+    }
+    
+    @mixin abtshow-subtext {
+        line-height: 14px;
+        color: $primarycolor;
+        font: {
+            size: 12px;
+            family: "GothamBook";
+        }
+    }
+    
+    @mixin play-icon {
+        color: $tertiarycolor;
+        background-color: transparent;
+        border-radius: 50%;
+        padding: 0px 5px;
+        border: 1px solid $boundarycolor;
+        font-size: larger;
+        margin: 0 13px 0 22px;
+    }
+    
+    
+    @mixin audio-title {
+        color: $secondarycolor;
+        line-height: 16px;
+        margin-top: 3px;
+        font: {
+            size: 13px;
+            family: "Montserrat-Regular", sans-serif;
+        }
+    }
+    
+    @mixin mobile-view {
+        @media (max-width: 599px) {
+            @content;
+            .row {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+    
+    @mixin purple-button {
+        width: 99px;
+        height: 33px;
+        background-color: $tertirypurple;
+        border-radius: 17px;
+        letter-spacing: 2.2px;
+        line-height: 14px;
+        color: $whitecolor;
+        margin-bottom: 50px;
+        font: {
+            size: 11px;
+            family: "Montserrat-Bold", sans-serif;
+        }
+        &:hover {
+            background-color: $whitecolor;
+            border: 1px solid $tertirypurple;
+            color: $tertirypurple;
+        }
+    }
+    
+    @mixin triple-purple-button {
+        width: 90px;
+        height: 26px;
+        background-color: $tertirypurple;
+        border-radius: 13px;
+        line-height: 10px;
+        color: $whitecolor;
+        font: {
+            size: 8px;
+            family: "Montserrat-Regular", sans-serif;
+        }
+        &:hover {
+            background-color: $whitecolor;
+            border: 1px solid $tertirypurple;
+            color: $tertirypurple;
+        }
+    }

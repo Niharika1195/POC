@@ -1,0 +1,1 @@
+$(document).ready((function(){$(".card.small-card-type img").hover((function(){$(".card.small-card-type.btn-efct button.add-to-playlist-button-no").css("display","block")}),(function(){$(".card.small-card-type.btn-efct button.add-to-playlist-button-no").css("display","none")}))}));
